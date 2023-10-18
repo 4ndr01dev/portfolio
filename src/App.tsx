@@ -10,7 +10,9 @@ function App() {
       <Navbar></Navbar>
       </header>
       <section>
+        <h1>
           {t("welcome")}
+        </h1>
       </section>
     </div>
   );

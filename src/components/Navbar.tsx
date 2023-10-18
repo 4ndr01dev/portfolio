@@ -31,8 +31,6 @@ const Navbar = () => {
     <input type="radio" name='spanish' value={Languages.Spanish} checked={selectedLanguage === Languages.Spanish} onChange={e=>selectingLanguage(e)}/> Español
     <input type="radio" name='english'  value={Languages.English} checked={selectedLanguage === Languages.English} onChange={e=>selectingLanguage(e)}/> English
     </form>
-    <p>Selected</p>
-    {selectedLanguage}
     </>
   )
 }
