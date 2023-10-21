@@ -35,17 +35,9 @@
     .technologies {
         height: 40%;
         display: flex;
-
+        flex-direction: row;
         align-items: center;
-        .technologiesCard {
-            margin: 5vh;
-            background-color: white;
-            color: black;
-            height: 18vh;
-            width: 28vw;
-            padding: 2vh;
-            border-radius: 7px;
- 
-        }
+
+
     }
 }

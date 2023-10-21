@@ -1,6 +1,8 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next';
 import './DescriptionSection.scss'
+import Card from './atoms/Card';
+
 
 const DescriptionSection = () => {
     const { t } = useTranslation()
@@ -15,25 +17,24 @@ const DescriptionSection = () => {
                 </p>
             </div>
 
-            <div className='technologies'>
-                <article className='technologiesCard'>
+            
 
-                <h3>
-                    {t('technologyTitle')}
+                <Card title={t('technologyTitle')}>
+                    <article>
 
-                </h3>
-                <section>
-                    <div>
-                        circulos
-                    </div>
-                    <div>
-                        {t('technologySubtitle')}
-                        {t('technologyDescription')}
+                        <section className='technologies'>
+                            <div >
+                                circulos
+                            </div>
+                            <div>
+                                {t('technologySubtitle')}
+                                {t('technologyDescription')}
 
-                    </div>
-                </section>
-                </article>
-            </div>
+                            </div>
+                        </section>
+                    </article>
+                </Card>
+
         </section>
     )
 }
