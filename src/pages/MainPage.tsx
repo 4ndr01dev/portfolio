@@ -2,6 +2,7 @@ import React from 'react'
 import './MainPage.scss'
 import { useTranslation } from 'react-i18next';
 import DescriptionSection from '../components/DescriptionSection';
+import GitSectión from '../components/GitSection';
 
 
 
@@ -9,7 +10,7 @@ const MainPage = () => {
   const { t } = useTranslation()
 
   return (
-    <main className='container'>MainPage
+    <main className='container'>
 
       <article className='title'>
 
@@ -20,7 +21,9 @@ const MainPage = () => {
       </article>
       <article className='content'>
         <DescriptionSection></DescriptionSection>
-        <section>imagen git</section>
+        <section>
+    <GitSectión></GitSectión>
+        </section>
       </article>
 
       <h2>
