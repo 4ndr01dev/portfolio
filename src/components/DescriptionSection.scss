@@ -1,0 +1,49 @@
+@import '/src/index.scss';
+
+.profile {
+
+
+    .button {
+        display: flex;
+        height: 10%;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            width: 20vw;
+            height: 80%;
+            background: $primary-color;
+            padding: 7px;
+            border-radius: 7px;
+
+        }
+    }
+
+    .description {
+        height: 40%;
+        
+        p {
+            padding: 5vh;
+        }
+    }
+
+    .technologies {
+        height: 40%;
+        display: flex;
+
+        align-items: center;
+        .technologiesCard {
+            margin: 5vh;
+            background-color: white;
+            color: black;
+            height: 18vh;
+            width: 28vw;
+            padding: 2vh;
+            border-radius: 7px;
+ 
+        }
+    }
+}
