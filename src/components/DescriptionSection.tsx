@@ -17,12 +17,13 @@ const DescriptionSection = () => {
                 </p>
             </div>
 
-            
+            <div className='technologies'>
+
 
                 <Card title={t('technologyTitle')}>
                     <article>
 
-                        <section className='technologies'>
+                        <section className='technologiesContent'>
                             <div >
                                 circulos
                             </div>
@@ -34,6 +35,7 @@ const DescriptionSection = () => {
                         </section>
                     </article>
                 </Card>
+            </div>
 
         </section>
     )

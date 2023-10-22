@@ -12,8 +12,8 @@ const GitSection = () => {
       <figure className='figure'>
         <img src={largeIcon} alt="" className='image' />
       </figure>
-      <Card title={t('githubTitle')} thumbnail={smallIcon}>
-      </Card>
+      {/* <Card title={t('githubTitle')} thumbnail={smallIcon}>
+      </Card> */}
     </div>
   )
 }
