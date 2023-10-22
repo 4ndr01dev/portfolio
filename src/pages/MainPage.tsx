@@ -15,7 +15,7 @@ const MainPage = () => {
       <article className='title'>
 
         <h1>
-          Álvaro Andrade Ardiles
+          ÁLVARO ANDRADE ARDILES
         </h1>
 
       </article>
