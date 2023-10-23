@@ -3,47 +3,41 @@ import i18n from "i18next";
 import './navbar.scss'
 
 const Navbar = () => {
-  enum Languages{
-    Spanish,
-    English
-  } 
-  const [selectedLanguage, setSelectedLanguage]= useState<Languages>(Languages.Spanish)
-  const selectingLanguage = (event: React.ChangeEvent<HTMLInputElement>)=>{
-    let newLanguage = parseInt(event.target.value) 
-    setSelectedLanguage(newLanguage)
-    switch (newLanguage) {
-      case Languages.Spanish:
-        i18n.changeLanguage('es')
-        break;
-        case Languages.English:
-        console.log(parseInt(event.target.value))
-        i18n.changeLanguage('en')
-        break;
-    
-      default:
-        break;
+
+  const [englishSelected, setEnglishSelected] = useState<boolean>(false)
+  const selectingLanguage = (event: React.ChangeEvent<HTMLInputElement>) => {
+
+    setEnglishSelected(event.target.checked)
+    if (event.target.checked) {
+          i18n.changeLanguage('en')
     }
-    return
+    else {
+
+          i18n.changeLanguage('es')
+    }
+
+
   }
 
   return (
     <>
-    <header>
-<figure>
-  logo
-</figure>
-<nav>
-  <ul>
-    <li>
-      item 
-    </li>
-  </ul>
-</nav>
-      <form >
-      <input type="radio" name='spanish' value={Languages.Spanish} checked={selectedLanguage === Languages.Spanish} onChange={e=>selectingLanguage(e)}/> Español
-      <input type="radio" name='english'  value={Languages.English} checked={selectedLanguage === Languages.English} onChange={e=>selectingLanguage(e)}/> English
-      </form>
-    </header>
+      <header>
+        <figure>
+          logo
+        </figure>
+        <nav>
+          <ul>
+            <li>
+              item
+          {englishSelected}
+            </li>
+          </ul>
+        </nav>
+        <form >
+          English
+          <input type="checkbox"  checked={englishSelected} onChange={e => selectingLanguage(e)} /> Español
+        </form>
+      </header>
     </>
   )
 }
