@@ -3,7 +3,7 @@ $font-color: #FFFFFF;
 $primary-color: #42CBEC;
 $secondary-color: #8B3DCB;
 $header-font-family: 'Merriweather Sans', sans-serif;
-
+$gradient-color  : linear-gradient(135deg, $secondary-color 0%, $primary-color 100%);
 body {
   display: flex;
   flex-direction: column;
