@@ -25,10 +25,6 @@ const MainPage = () => {
           <GitSection></GitSection>
         </section>
       </article>
-
-      <h2>
-        {t("welcome")}
-      </h2>
     </main>
   )
 }
