@@ -1,15 +1,63 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import './DescriptionSection.scss'
 import Card from './atoms/Card';
-
-
+import ImagesGrid from './atoms/ImagesGrid';
+import { Technology } from '../types/Technologies';
 const DescriptionSection = () => {
+    const [technologies, setTechnologies] = useState<Technology[]>([{
+        name: 'typescript',
+        description: 'typescript',
+        index: 1,
+        imageUrl: 'https://icons.veryicon.com/png/o/business/vscode-program-item-icon/typescript-def.png'
+    }, {
+        name: 'typescript',
+        description: 'typescript',
+        index: 1,
+        imageUrl: 'https://icons.veryicon.com/png/o/business/vscode-program-item-icon/typescript-def.png'
+    }, {
+        name: 'typescript',
+        description: 'typescript',
+        index: 1,
+        imageUrl: 'https://icons.veryicon.com/png/o/business/vscode-program-item-icon/typescript-def.png'
+    }, {
+        name: 'typescript',
+        description: 'typescript',
+        index: 1,
+        imageUrl: 'https://icons.veryicon.com/png/o/business/vscode-program-item-icon/typescript-def.png'
+    }])
     const { t } = useTranslation()
+    const buttonHandler = async () => {
+
+        let response = await fetch('http://localhost:8000/test', { method: 'GET' })
+        console.log(response.ok)
+        if (!response.ok) {
+            alert('Ha ocurrido un error al intentar descargar el archivo. \
+            Inténtelo nuevamente mas tarde')
+        }
+        let pdfFile = await response.blob()
+        console.log(pdfFile.size);
+        downloadBlobPdfFile(pdfFile, getFileName())
+        // TODO hacer que esta función se encarge de descargar el blob
+    }
+    const downloadBlobPdfFile = (file: Blob, fileName: string) => {
+        console.log(file)
+        let link = document.createElement('a')
+        link.href = window.URL.createObjectURL(file)
+
+        link.setAttribute('download', fileName)
+
+        document.body.appendChild(link)
+        link.click()
+
+    }
+    const getFileName = () => {
+        return 'cv_alvaro_andrade_2023_fs.pdf'
+    }
     return (
         <section className='profile'>
             <div className='button'>
-                <a href='google.com'> {t('cv')} </a>
+                <a href='#' onClick={buttonHandler} > {t('cv')} </a>
             </div>
             <div className='description'>
                 <p>
@@ -24,10 +72,11 @@ const DescriptionSection = () => {
                     <article>
 
                         <section className='technologiesContent'>
-                            <div >
-                                circulos
+                            <div className='imageGridSection' >
+                                
+                                <ImagesGrid technologies={technologies}></ImagesGrid>
                             </div>
-                            <div>
+                            <div className='technologyDescription'>
                                 {t('technologySubtitle')}
                                 {t('technologyDescription')}
 

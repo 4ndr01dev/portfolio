@@ -1,13 +1,13 @@
 import React from 'react'
 import './MainPage.scss'
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import DescriptionSection from '../components/DescriptionSection';
 import GitSection from '../components/GitSection';
 
 
 
 const MainPage = () => {
-  const { t } = useTranslation()
+  // const { t } = useTranslation()
 
   return (
     <main className='container'>
@@ -15,13 +15,13 @@ const MainPage = () => {
       <article className='title'>
 
         <h1>
-          ÁLVARO ANDRADE ARDILES
+          Transformando Ideas en Código
         </h1>
 
       </article>
       <article className='content'>
         <DescriptionSection></DescriptionSection>
-        <section>
+        <section className='git_section'>
           <GitSection></GitSection>
         </section>
       </article>

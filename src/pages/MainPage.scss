@@ -36,7 +36,7 @@
         flex-direction: column;
         height: 100%;
 
-        section {
+        .git_section {
             height: 100%;
             width: 100%;
         }
@@ -46,7 +46,7 @@
             height: 100%;
             justify-content: space-between;
 
-            section {
+            .git_section {
                 width: 100%;
             }
         }

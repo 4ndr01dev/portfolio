@@ -5,9 +5,9 @@
     display: flex;
     flex-direction: column;
     height: 85%;
-    // justify-content: center;
+
     justify-content: space-between;
-        // background-color: white;
+
     .button {
         margin-left: 10%;
         margin-top: 6vh;
@@ -45,12 +45,23 @@
 
         }
     }
-
     .technologies {
         margin-left: 10%;
         margin-bottom: 7%;
         display: flex;
         flex-direction: row;
         align-items: center;
+        .technologiesContent{
+            display: flex;
+            flex-direction: row;
+            
+            .imageGridSection{
+                display :flex;
+                width: 60%;
+                height: 1rem;
+                min-height: 6rem;
+                
+            }
+        }
     }
 }
