@@ -2,7 +2,8 @@
 @import '/src/styles/mixins/mixins.scss';
 
 .containerImageGrid {
-    width: 50%;
+    cursor: pointer;
+    width: 45%;
     display: flex;
     flex-direction: row;
     position: relative; // Agrega posición relativa aquí
@@ -13,7 +14,7 @@
             top: 0;
             position: absolute;
             z-index: $i;
-            margin-left: 4.5vh * $i;
+            margin-left: 4.5vh * ($i - 1) ;
         }
     }
 

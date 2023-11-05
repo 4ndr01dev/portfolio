@@ -41,6 +41,7 @@ const DescriptionSection = () => {
         // TODO hacer que esta función se encarge de descargar el blob
     }
     const downloadBlobPdfFile = (file: Blob, fileName: string) => {
+        // TODO pasar a carpeta utils 
         console.log(file)
         let link = document.createElement('a')
         link.href = window.URL.createObjectURL(file)
@@ -66,19 +67,21 @@ const DescriptionSection = () => {
             </div>
 
             <div className='technologies'>
-
-
                 <Card title={t('technologyTitle')}>
                     <article>
-
                         <section className='technologiesContent'>
                             <div className='imageGridSection' >
-                                
+
                                 <ImagesGrid technologies={technologies}></ImagesGrid>
                             </div>
                             <div className='technologyDescription'>
+                                <h3>
+
                                 {t('technologySubtitle')}
+                                </h3>
+                                <p>
                                 {t('technologyDescription')}
+                                </p>
 
                             </div>
                         </section>

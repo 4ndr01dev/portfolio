@@ -54,14 +54,21 @@
         .technologiesContent{
             display: flex;
             flex-direction: row;
-            
+
             .imageGridSection{
+                
                 display :flex;
                 width: 60%;
                 height: 1rem;
                 min-height: 6rem;
                 
             }
+            .technologyDescription{
+
+                margin: 0rem 1rem;
+
+            }
+
         }
     }
 }
