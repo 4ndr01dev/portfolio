@@ -3,11 +3,13 @@
 
 .technologiesCard {
     // margin: 10%;
-    background-color: white;
+    background-color: $background-secondary-color;
     color: black;
-    height: 18vh;
-    width: 28vw;
-    padding: 2vh;
+    // max-height: 18vh;
+    // min-height: 10vh;
+    min-width: 100%;
+    max-width: 30rem;
+    padding: 1vh 2vw;
     border-radius: 7px;
 
     .header {

@@ -12,6 +12,7 @@
         align-items: center;
         justify-content: center;
         height: 35vh;
+        margin: 1rem;
 
         h1 {
             margin: 0;
@@ -25,7 +26,7 @@
 
             h1 {
                 margin: 0;
-                font-size: 114px;
+                font-size: 105px;
             }
         }
     }
@@ -37,6 +38,12 @@
         height: 100%;
 
         .git_section {
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+        .description_section {
+            display: flex;
             height: 100%;
             width: 100%;
         }
@@ -45,10 +52,11 @@
             flex-direction: row;
             height: 100%;
             justify-content: space-between;
-
-            .git_section {
-                width: 100%;
-            }
+            display: flex;
+            // .git_section {
+            //     display: flex;
+            //     width: 100%;
+            // }
         }
     }
 

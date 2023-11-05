@@ -20,8 +20,12 @@ const MainPage = () => {
 
       </article>
       <article className='content'>
+        <section className='description_section'>
+
         <DescriptionSection></DescriptionSection>
+        </section>
         <section className='git_section'>
+
           <GitSection></GitSection>
         </section>
       </article>

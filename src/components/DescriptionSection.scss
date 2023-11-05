@@ -1,16 +1,13 @@
 @import '/src/index.scss';
 
 .profile {
-    // margin: 0;
     display: flex;
     flex-direction: column;
-    height: 85%;
-
+    height: 100%;
     justify-content: space-between;
-
     .button {
         margin-left: 10%;
-        margin-top: 6vh;
+        margin-top: 2vh;
         display: flex;
         height: 75px;
         justify-content: center;
@@ -47,18 +44,18 @@
     }
     .technologies {
         margin-left: 10%;
-        margin-bottom: 7%;
+        margin-bottom: 2rem;
+        width: 60%;
+        min-width: 350px;
         display: flex;
         flex-direction: row;
         align-items: center;
         .technologiesContent{
             display: flex;
             flex-direction: row;
-
             .imageGridSection{
-                
                 display :flex;
-                width: 60%;
+                width: 70%;
                 height: 1rem;
                 min-height: 6rem;
                 
