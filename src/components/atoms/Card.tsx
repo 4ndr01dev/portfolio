@@ -20,7 +20,6 @@ const Card = (props: cardProps) => {
 
                 <h3>
                     {props.title}
-                    
                 </h3>
             </header>
             {props.children}
