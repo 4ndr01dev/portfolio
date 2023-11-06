@@ -75,10 +75,10 @@ const DescriptionSection = () => {
                                 <ImagesGrid technologies={technologies}></ImagesGrid>
                             </div>
                             <div className='technologyDescription'>
-                                <h3>
+                                <h4>
 
                                 {t('technologySubtitle')}
-                                </h3>
+                                </h4>
                                 <p>
                                 {t('technologyDescription')}
                                 </p>

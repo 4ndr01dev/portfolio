@@ -7,7 +7,7 @@ interface cardProps {
 }
 const Card = (props: cardProps) => {
     return (
-        <div className='technologiesCard'>
+        <div className='card_component_container'>
             <header className='header'>
             {
                 props.thumbnail ?
