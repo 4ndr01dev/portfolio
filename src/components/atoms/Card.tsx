@@ -1,28 +1,40 @@
 import React from 'react'
 import './Card.scss'
 interface cardProps {
-    title: string
+    title?: string
     children: React.ReactNode
     thumbnail?: string;
+    isClickable?: boolean
+    hasHeader?: boolean
+    onClick?: () => void
 }
-const Card = (props: cardProps) => {
+const Card = ({
+    title,
+    children,
+    thumbnail,
+    isClickable = false,
+    hasHeader = true,
+    onClick }: cardProps) => {
     return (
-        <div className='card_component_container'>
-            <header className='header'>
+        <div className={isClickable ? 'card_component_container clickableCard' : 'card_component_container '} onClick={onClick} >
             {
-                props.thumbnail ?
-                    <figure className='icon' > 
-                        <img src={props.thumbnail} alt="" className='image'/>
-                    </figure>
-                    :
-                    ''
+                hasHeader ?
+                    <header className='header'>
+                        {
+                            thumbnail ?
+                                <figure className='icon' >
+                                    <img src={thumbnail} alt="" className='image' />
+                                </figure>
+                                :
+                                ''
+                        }
+                        <h3>
+                            {title}
+                        </h3>
+                    </header>
+                    : ''
             }
-
-                <h3>
-                    {props.title}
-                </h3>
-            </header>
-            {props.children}
+            {children}
         </div>
     )
 }

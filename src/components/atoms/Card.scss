@@ -7,10 +7,30 @@
     background-color: $background-secondary-color;
     color: black;
     min-width: 100%;
+    min-height: 100%;
     max-width: 30rem;
     padding: 1vh 1vw;
     border-radius: 7px;
 
+    &.clickableCard {
+        cursor: pointer;
+        position: relative;
+
+        &:hover::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 0;
+            z-index: -1;
+            width: 105%;
+            height: 105%;
+            border-radius: 7px;
+            background: $gradient-color;
+            // opacity: 0.9;
+            filter: blur(35px);
+            transition: opacity 0.3s ease;
+        }
+    }
 
     .header {
         display: flex;

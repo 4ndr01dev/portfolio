@@ -1,0 +1,21 @@
+@import '/src/index.scss';
+
+.modalContainer {
+  display: flex;
+  background: rgba($primary-color, 0.3);
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 6;
+  backdrop-filter: blur(23px);
+  align-items: center;
+  justify-content: center;
+
+  .card-modal-section {
+    display: flex;
+    height: 70%;
+    width: 80%;
+  }
+}

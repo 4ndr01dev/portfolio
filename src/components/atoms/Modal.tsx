@@ -1,0 +1,35 @@
+import React, { Children } from 'react'
+import './Modal.scss'
+import Card from './Card';
+
+
+interface modalProps {
+  hadCard?: boolean;
+  isOpen?: boolean;
+  onClose: () => void;
+  children: React.ReactNode
+}
+
+const Modal = ({ hadCard = true, isOpen = false, onClose, children }: modalProps) => {
+  const handleClick = () => {
+    onClose()
+  }
+  return (
+    <>
+      {
+        isOpen ?
+          <article className='modalContainer'
+            onClick={hadCard ? handleClick : undefined}
+          >
+            <section className='card-modal-section'>
+              <Card hasHeader={false}>
+                {children}
+              </Card>
+            </section>
+          </article> : ''
+      }
+    </>
+  )
+}
+
+export default Modal

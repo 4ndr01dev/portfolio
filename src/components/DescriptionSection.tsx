@@ -4,7 +4,9 @@ import './DescriptionSection.scss'
 import Card from './atoms/Card';
 import ImagesGrid from './atoms/ImagesGrid';
 import { Technology } from '../types/Technologies';
+import Modal from './atoms/Modal';
 const DescriptionSection = () => {
+    const { t } = useTranslation()
     const [technologies, setTechnologies] = useState<Technology[]>([{
         name: 'typescript',
         description: 'typescript',
@@ -26,7 +28,7 @@ const DescriptionSection = () => {
         index: 1,
         imageUrl: 'https://icons.veryicon.com/png/o/business/vscode-program-item-icon/typescript-def.png'
     }])
-    const { t } = useTranslation()
+    const [modalIsOpen, setModalIsOpen] = useState<boolean>(true)
     const buttonHandler = async () => {
 
         let response = await fetch('http://localhost:8000/test', { method: 'GET' })
@@ -55,6 +57,12 @@ const DescriptionSection = () => {
     const getFileName = () => {
         return 'cv_alvaro_andrade_2023_fs.pdf'
     }
+    const closeModalHandler = () => {
+        setModalIsOpen(false)
+    }
+    const handleCardClick = () =>{
+        setModalIsOpen(true)
+    }
     return (
         <section className='profile'>
             <div className='button'>
@@ -67,8 +75,8 @@ const DescriptionSection = () => {
             </div>
 
             <div className='technologies'>
-                <Card title={t('technologyTitle')}>
-                    <article>
+                <Card title={t('technologyTitle')} isClickable={true} onClick={handleCardClick}>
+                    <article className='technology_card_article'>
                         <section className='technologiesContent'>
                             <div className='imageGridSection' >
 
@@ -77,16 +85,19 @@ const DescriptionSection = () => {
                             <div className='technologyDescription'>
                                 <h4>
 
-                                {t('technologySubtitle')}
+                                    {t('technologySubtitle')}
                                 </h4>
                                 <p>
-                                {t('technologyDescription')}
+                                    {t('technologyDescription')}
                                 </p>
 
                             </div>
                         </section>
                     </article>
                 </Card>
+                <Modal onClose={closeModalHandler} isOpen={modalIsOpen}>
+                    <p>hola</p>
+                </Modal>
             </div>
 
         </section>
