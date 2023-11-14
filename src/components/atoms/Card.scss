@@ -10,25 +10,37 @@
     min-height: 100%;
     max-width: 30rem;
     padding: 1vh 1vw;
-    border-radius: 7px;
+    border-radius: 15px;
+
+    &.modal_card {
+        overflow-y: auto;
+        background-color: $terciar-background-color;
+    }
+
+
 
     &.clickableCard {
         cursor: pointer;
         position: relative;
 
-        &:hover::after {
+        &::after {
             content: '';
             position: absolute;
             top: -5px;
-            left: 0;
+            left: -5px;
             z-index: -1;
-            width: 105%;
-            height: 105%;
+            width: calc(100% + 10px);
+            height: calc(100% + 10px);
             border-radius: 7px;
             background: $gradient-color;
-            // opacity: 0.9;
             filter: blur(35px);
-            transition: opacity 0.3s ease;
+            transition: opacity 0.3s ease, transform 0.5s ease;
+            opacity: 0;
+        }
+
+        &:hover::after {
+            transform: scale(1.05);
+            opacity: 1;
         }
     }
 
@@ -36,7 +48,6 @@
         display: flex;
         min-height: 1rem;
         height: 30%;
-        // background-color: blue;
         flex-direction: row;
         justify-content: left;
 

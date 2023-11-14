@@ -22,7 +22,7 @@ const Modal = ({ hadCard = true, isOpen = false, onClose, children }: modalProps
             onClick={hadCard ? handleClick : undefined}
           >
             <section className='card-modal-section'>
-              <Card hasHeader={false}>
+              <Card hasHeader={false} isModal={true}>
                 {children}
               </Card>
             </section>

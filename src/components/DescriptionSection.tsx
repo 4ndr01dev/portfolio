@@ -7,27 +7,219 @@ import { Technology } from '../types/Technologies';
 import Modal from './atoms/Modal';
 const DescriptionSection = () => {
     const { t } = useTranslation()
-    const [technologies, setTechnologies] = useState<Technology[]>([{
-        name: 'typescript',
-        description: 'typescript',
-        index: 1,
-        imageUrl: 'https://icons.veryicon.com/png/o/business/vscode-program-item-icon/typescript-def.png'
-    }, {
-        name: 'typescript',
-        description: 'typescript',
-        index: 1,
-        imageUrl: 'https://icons.veryicon.com/png/o/business/vscode-program-item-icon/typescript-def.png'
-    }, {
-        name: 'typescript',
-        description: 'typescript',
-        index: 1,
-        imageUrl: 'https://icons.veryicon.com/png/o/business/vscode-program-item-icon/typescript-def.png'
-    }, {
-        name: 'typescript',
-        description: 'typescript',
-        index: 1,
-        imageUrl: 'https://icons.veryicon.com/png/o/business/vscode-program-item-icon/typescript-def.png'
-    }])
+    const [technologies, setTechnologies] = useState<Technology[]>([
+        {
+            "name": "Vue",
+            "hasCertify": true,
+            "hasCourse": true,
+            "courses": [
+                {
+                    "Name": "Advanced Vue Techniques",
+                    "school": "Udemy",
+                    "year": 2021
+                }
+            ],
+            "description": "Vue.js es un framework progresivo para construir interfaces de usuario.",
+            "index": 1,
+            "imageUrl": "https://vuejs.org/images/logo.png"
+        },
+        {
+            "name": "Fast-api",
+            "hasCertify": true,
+            "hasCourse": true,
+            "courses": [
+                {
+                    "Name": "FastAPI for Web Development",
+                    "school": "Coursera",
+                    "year": 2022
+                }
+            ],
+            "description": "FastAPI es un moderno y rápido framework web para construir APIs con Python.",
+            "index": 2,
+            "imageUrl": "https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png"
+        }, {
+            "name": "Flutter",
+            "hasCertify": true,
+            "hasCourse": true,
+            "courses": [
+                {
+                    "Name": "Flutter Development Bootcamp",
+                    "school": "Udemy",
+                    "year": 2021
+                }
+            ],
+            "description": "Flutter es un framework de UI de código abierto creado por Google para la creación de aplicaciones para móviles, web y escritorio.",
+            "index": 3,
+            "imageUrl": "https://flutter.dev/images/flutter-logo-sharing.png"
+        },
+        {
+            "name": "Python",
+            "hasCertify": true,
+            "hasCourse": true,
+            "courses": [
+                {
+                    "Name": "Python for Data Science",
+                    "school": "Coursera",
+                    "year": 2020
+                }
+            ],
+            "description": "Python es un lenguaje de programación de alto nivel, interpretado, con semántica dinámica.",
+            "index": 4,
+            "imageUrl": "https://www.python.org/static/community_logos/python-logo-master-v3-TM.png"
+        },
+        {
+            "name": "JavaScript",
+            "hasCertify": true,
+            "hasCourse": true,
+            "courses": [
+                {
+                    "Name": "JavaScript: Understanding the Weird Parts",
+                    "school": "Udemy",
+                    "year": 2019
+                }
+            ],
+            "description": "JavaScript es un lenguaje de programación ligero, interpretado, o compilado justo a tiempo con funciones de primera clase.",
+            "index": 5,
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+        }, {
+            "name": "MySQL",
+            "hasCertify": false,
+            "hasCourse": true,
+            "courses": [
+                {
+                    "Name": "MySQL for Beginners",
+                    "school": "Udemy",
+                    "year": 2021
+                }
+            ],
+            "description": "MySQL es un sistema de gestión de bases de datos relacional, basado en lenguaje SQL.",
+            "index": 6,
+            "imageUrl": "https://www.mysql.com/common/logos/logo-mysql-170x115.png"
+        },
+        {
+            "name": "Scrum",
+            "hasCertify": true,
+            "hasCourse": false,
+            "courses": [],
+            "description": "Scrum es un marco de trabajo para desarrollo ágil de software que enfatiza el trabajo en equipo, la iteración y la adaptabilidad.",
+            "index": 7,
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/58/Scrum_process.svg"
+        },
+        {
+            "name": "Git",
+            "hasCertify": false,
+            "hasCourse": true,
+            "courses": [
+                {
+                    "Name": "Git Complete: The definitive, step-by-step guide",
+                    "school": "Udemy",
+                    "year": 2019
+                }
+            ],
+            "description": "Git es un sistema de control de versiones distribuido, diseñado para manejar desde proyectos pequeños a muy grandes con rapidez y eficiencia.",
+            "index": 8,
+            "imageUrl": "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+        },
+        {
+            "name": "CSS",
+            "hasCertify": false,
+            "hasCourse": true,
+            "courses": [
+                {
+                    "Name": "Advanced CSS and Sass: Flexbox, Grid, Animations and More!",
+                    "school": "Udemy",
+                    "year": 2020
+                }
+            ],
+            "description": "CSS es un lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado escrito en HTML o XML.",
+            "index": 9,
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg"
+        },
+        {
+            "name": "React",
+            "hasCertify": true,
+            "hasCourse": true,
+            "courses": [
+                {
+                    "Name": "React - The Complete Guide",
+                    "school": "Udemy",
+                    "year": 2022
+                }
+            ],
+            "description": "React es una biblioteca de JavaScript para construir interfaces de usuario, mantenida por Facebook y una comunidad de desarrolladores.",
+            "index": 10,
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+        },
+        {
+            "name": "Angular",
+            "hasCertify": false,
+            "hasCourse": true,
+            "courses": [
+                {
+                    "Name": "Angular - The Complete Guide",
+                    "school": "Udemy",
+                    "year": 2021
+                }
+            ],
+            "description": "Angular es un marco de trabajo para aplicaciones web desarrollado por Google, que utiliza TypeScript como principal lenguaje de programación.",
+            "index": 11,
+            "imageUrl": "https://angular.io/assets/images/logos/angular/angular.svg"
+        },
+        {
+            "name": "STRAPI",
+            "hasCertify": false,
+            "hasCourse": false,
+            "courses": [],
+            "description": "STRAPI es un sistema de gestión de contenido (CMS) de código abierto basado en Node.js, que ofrece APIs REST y GraphQL.",
+            "index": 12,
+            "imageUrl": "https://strapi.io/assets/strapi-logo-light.svg"
+        },
+        {
+            "name": "Postgres",
+            "hasCertify": false,
+            "hasCourse": true,
+            "courses": [
+                {
+                    "Name": "SQL and PostgreSQL: The Complete Developer's Guide",
+                    "school": "Udemy",
+                    "year": 2021
+                }
+            ],
+            "description": "Postgres, también conocido como PostgreSQL, es un sistema de gestión de bases de datos relacional orientado a objetos y de código abierto.",
+            "index": 13,
+            "imageUrl": "https://www.postgresql.org/media/img/about/press/elephant.png"
+        },
+        {
+            "name": "Python",
+            "hasCertify": true,
+            "hasCourse": true,
+            "courses": [
+                {
+                    "Name": "Complete Python Bootcamp: Go from zero to hero in Python 3",
+                    "school": "Udemy",
+                    "year": 2019
+                }
+            ],
+            "description": "Python es un lenguaje de programación de alto nivel, interpretado, con una sintaxis muy clara y legible, ampliamente utilizado en ciencia de datos, desarrollo web y automatización.",
+            "index": 14,
+            "imageUrl": "https://www.python.org/static/community_logos/python-logo-master-v3-TM.png"
+        },
+        {
+            "name": "Docker",
+            "hasCertify": false,
+            "hasCourse": true,
+            "courses": [
+                {
+                    "Name": "Docker Mastery: with Kubernetes +Swarm from a Docker Captain",
+                    "school": "Udemy",
+                    "year": 2020
+                }
+            ],
+            "description": "Docker es una plataforma de software que permite la creación, prueba e implementación de aplicaciones rápidamente a través de contenedores de software.",
+            "index": 15,
+            "imageUrl": "https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png"
+        },
+    ])
     const [modalIsOpen, setModalIsOpen] = useState<boolean>(true)
     const buttonHandler = async () => {
 
@@ -60,7 +252,7 @@ const DescriptionSection = () => {
     const closeModalHandler = () => {
         setModalIsOpen(false)
     }
-    const handleCardClick = () =>{
+    const handleCardClick = () => {
         setModalIsOpen(true)
     }
     return (
@@ -96,7 +288,49 @@ const DescriptionSection = () => {
                     </article>
                 </Card>
                 <Modal onClose={closeModalHandler} isOpen={modalIsOpen}>
-                    <p>hola</p>
+                    <section className='technologies_section_container'>
+                        {
+                            technologies.map((technology: Technology, i) => {
+                                return (
+                                    <section key={i} className='technology-section-container'>
+                                        <section className='technology-section-card'>
+                                            <article className='technology-article-card'>
+                                                <figure key={i} className='technology-figure-modal' >
+
+                                                    <img key={i} src={technology.imageUrl} alt="" className='technology-image-modal' />
+                                                </figure>
+                                                <div className='technology-description'>
+                                                    {/* description */}
+                                                    <div>
+
+                                                        <h2>{technology.name}</h2>
+                                                        <p>tiempo de desarrollo</p>
+                                                    </div>
+                                                    <div>
+                                                        <p>{technology.description}</p>
+                                                    </div>
+                                                    <footer>
+                                                        <a href=""> certified</a>
+                                                    </footer>
+                                                </div>
+                                            </article>
+                                            <div>
+                                                <hr />
+                                            </div>
+                                            <footer className='technology-card-footer'>
+                                                <div>
+                                                    grid image
+                                                </div>
+                                                <div>
+                                                    preferencia
+                                                </div>
+                                            </footer>
+                                        </section>
+                                    </section>
+                                )
+                            })
+                        }
+                    </section>
                 </Modal>
             </div>
 
