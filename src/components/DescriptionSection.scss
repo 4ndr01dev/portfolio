@@ -91,6 +91,14 @@
                 justify-content: center;
                 align-items: center;
 
+                &:hover {
+                    .technology-figure-modal {
+                        .technology-image-modal {
+                            filter: sepia(0%) hue-rotate(10deg) saturate(100%) !important;
+                        }
+                    }
+                }
+
                 hr {
                     border: none;
                     height: 2px;
@@ -132,8 +140,11 @@
                                 width: 100%;
                                 height: 100%;
                                 object-fit: contain;
+                                filter: sepia(90%) hue-rotate(170deg) saturate(90%);
+                                transition: filter 0.01s ease-in-out;
                             }
                         }
+
 
                         .technology-description {
                             display: flex;
@@ -168,7 +179,9 @@
                         margin: 0.1rem 2rem 0.3rem 2rem;
                     }
                 }
+
             }
         }
+
     }
 }

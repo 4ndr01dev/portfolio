@@ -36,7 +36,7 @@ const DescriptionSection = () => {
             ],
             "description": "FastAPI es un moderno y rápido framework web para construir APIs con Python.",
             "index": 2,
-            "imageUrl": "https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png"
+            "imageUrl": "https://cdn.worldvectorlogo.com/logos/fastapi-1.svg"
         }, {
             "name": "Flutter",
             "hasCertify": true,
@@ -50,7 +50,7 @@ const DescriptionSection = () => {
             ],
             "description": "Flutter es un framework de UI de código abierto creado por Google para la creación de aplicaciones para móviles, web y escritorio.",
             "index": 3,
-            "imageUrl": "https://flutter.dev/images/flutter-logo-sharing.png"
+            "imageUrl": "https://storage.googleapis.com/cms-storage-bucket/4fd5520fe28ebf839174.svg"
         },
         {
             "name": "Python",
@@ -65,7 +65,7 @@ const DescriptionSection = () => {
             ],
             "description": "Python es un lenguaje de programación de alto nivel, interpretado, con semántica dinámica.",
             "index": 4,
-            "imageUrl": "https://www.python.org/static/community_logos/python-logo-master-v3-TM.png"
+            "imageUrl": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg"
         },
         {
             "name": "JavaScript",
@@ -80,7 +80,7 @@ const DescriptionSection = () => {
             ],
             "description": "JavaScript es un lenguaje de programación ligero, interpretado, o compilado justo a tiempo con funciones de primera clase.",
             "index": 5,
-            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+            "imageUrl": "https://cdn.worldvectorlogo.com/logos/javascript-1.svg"
         }, {
             "name": "MySQL",
             "hasCertify": false,
@@ -94,7 +94,7 @@ const DescriptionSection = () => {
             ],
             "description": "MySQL es un sistema de gestión de bases de datos relacional, basado en lenguaje SQL.",
             "index": 6,
-            "imageUrl": "https://www.mysql.com/common/logos/logo-mysql-170x115.png"
+            "imageUrl": "https://icons.veryicon.com/png/o/system/inspur-cloud-icon/rds-mysql.png"
         },
         {
             "name": "Scrum",
@@ -103,7 +103,7 @@ const DescriptionSection = () => {
             "courses": [],
             "description": "Scrum es un marco de trabajo para desarrollo ágil de software que enfatiza el trabajo en equipo, la iteración y la adaptabilidad.",
             "index": 7,
-            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/58/Scrum_process.svg"
+            "imageUrl": "https://seeklogo.com/images/S/scrum-logo-B057CBD9B8-seeklogo.com.png"
         },
         {
             "name": "Git",
@@ -190,21 +190,6 @@ const DescriptionSection = () => {
             "imageUrl": "https://www.postgresql.org/media/img/about/press/elephant.png"
         },
         {
-            "name": "Python",
-            "hasCertify": true,
-            "hasCourse": true,
-            "courses": [
-                {
-                    "Name": "Complete Python Bootcamp: Go from zero to hero in Python 3",
-                    "school": "Udemy",
-                    "year": 2019
-                }
-            ],
-            "description": "Python es un lenguaje de programación de alto nivel, interpretado, con una sintaxis muy clara y legible, ampliamente utilizado en ciencia de datos, desarrollo web y automatización.",
-            "index": 14,
-            "imageUrl": "https://www.python.org/static/community_logos/python-logo-master-v3-TM.png"
-        },
-        {
             "name": "Docker",
             "hasCertify": false,
             "hasCourse": true,
@@ -217,7 +202,7 @@ const DescriptionSection = () => {
             ],
             "description": "Docker es una plataforma de software que permite la creación, prueba e implementación de aplicaciones rápidamente a través de contenedores de software.",
             "index": 15,
-            "imageUrl": "https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png"
+            "imageUrl": "https://logos-world.net/wp-content/uploads/2021/02/Docker-Emblem.png"
         },
     ])
     const [modalIsOpen, setModalIsOpen] = useState<boolean>(true)
