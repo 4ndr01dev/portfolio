@@ -34,6 +34,7 @@
         justify-content: center;
 
         .technologyImage {
+            filter: sepia(90%) hue-rotate(160deg) saturate(100%);
             width: 90%;
             height: 90%;
             object-fit: cover;
