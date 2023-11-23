@@ -1,21 +1,24 @@
 import React from 'react'
 import './MainPage.scss'
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import DescriptionSection from '../components/DescriptionSection';
 import GitSection from '../components/GitSection';
 
 
 
 const MainPage = () => {
-  // const { t } = useTranslation()
+  const { t } = useTranslation()
 
   return (
     <main className='container'>
 
       <article className='title'>
 
+        <h2>
+          Álvaro Andrade Ardiles 
+        </h2>
         <h1>
-          Transformando Ideas en Código
+          {t('mainPageSubtitle')}
         </h1>
 
       </article>
