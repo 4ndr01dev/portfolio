@@ -10,29 +10,35 @@ const MainPage = () => {
   const { t } = useTranslation()
 
   return (
-    <main className='container'>
+    <>
+      <div className='mainContainer'>
+        <article className='title'>
 
-      <article className='title'>
+          <h2>
+            Álvaro Andrade Ardiles
+          </h2>
+          <h1>
+            {t('mainPageSubtitle')}
+          </h1>
 
-        <h2>
-          Álvaro Andrade Ardiles 
-        </h2>
-        <h1>
-          {t('mainPageSubtitle')}
-        </h1>
+        </article>
+        <article className='content'>
+          <section className='description_section'>
 
-      </article>
-      <article className='content'>
-        <section className='description_section'>
+            <DescriptionSection></DescriptionSection>
+          </section>
+          <section className='git_section'>
 
-        <DescriptionSection></DescriptionSection>
-        </section>
-        <section className='git_section'>
-
-          <GitSection></GitSection>
-        </section>
-      </article>
-    </main>
+            <GitSection></GitSection>
+          </section>
+        </article>
+      </div>
+      <div className='technologyContainer'>
+        <p>
+        newSection
+        </p>
+      </div>
+    </>
   )
 }
 

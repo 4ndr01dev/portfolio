@@ -1,10 +1,10 @@
 @import '/src/index.scss';
 @import '/src/styles/mixins/mixins.scss';
 
-.container {
+.mainContainer {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 92vh;
 
     
     .title {
@@ -30,13 +30,13 @@
             font-size: 48px;
         }
 
-        @include for-size(medium) {
+        @include for-size(large) {
             height: 75vh;
             margin: 0;
 
             h1 {
                 margin: 0;
-                font-size: 97px;
+                font-size: 68px;
             }
         }
     }
@@ -70,5 +70,11 @@
             // }
         }
     }
+
+}
+.technologyContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 
 }
