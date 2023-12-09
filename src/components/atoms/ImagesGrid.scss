@@ -3,13 +3,13 @@
 
 .containerImageGrid {
     width: 100%;
-    max-width: 45%;
+    max-width: 85%;
     display: flex;
     flex-direction: row;
-    position: relative; // Agrega posición relativa aquí
-    // margin: 20px;
+    position: relative;
+
     // Genera clases para cada imagen (asumiendo un máximo de 20 imágenes)
-    @for $i from 1 through 5 {
+    @for $i from 1 through 2 {
         .technologyFigure--#{$i} {
             top: 0;
             position: absolute;
@@ -17,12 +17,42 @@
             margin-left: (3em * ($i - 1));
         }
     }
-    // @include 
+
+    @include for-size(medium) {
+        @for $i from 1 through 2 {
+            .technologyFigure--#{$i} {
+                top: 0;
+                position: absolute;
+                z-index: $i;
+                margin-left: (3em * ($i - 1));
+            }
+        }
+    }
+    @include for-size(large) {
+        @for $i from 1 through 3 {
+            .technologyFigure--#{$i} {
+                top: 0;
+                position: absolute;
+                z-index: $i;
+                margin-left: (3em * ($i - 1));
+            }
+        }
+    }
+    @include for-size(xlarge) {
+        @for $i from 1 through 4 {
+            .technologyFigure--#{$i} {
+                top: 0;
+                position: absolute;
+                z-index: $i;
+                margin-left: (3em * ($i - 1));
+            }
+        }
+    }
 
 
     .technologyFigure {
         background: $background-lighten-primary-color;
-        box-shadow:-5px 0px 7px rgb(201, 201, 201);
+        box-shadow: -5px 0px 7px rgb(201, 201, 201);
         display: flex;
         height: 4em;
         width: 4em;
