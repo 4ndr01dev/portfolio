@@ -6,7 +6,7 @@
     flex-direction: column;
     height: 92vh;
 
-    
+
     .title {
         // padding-left: 5% ;   
         display: flex;
@@ -15,13 +15,13 @@
         height: 35vh;
         margin: 1rem;
         flex-direction: column;
-        
+
         h1 {
             margin: 0;
             display: flex;
             font-size: 34px;
         }
-        
+
         h2 {
             align-items: start;
             color: $primary-color;
@@ -72,9 +72,126 @@
     }
 
 }
-.technologyContainer{
+
+.technologyContainer {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    align-items: center;
+    justify-content: center;
 
+    .technologyContent {
+        height: 80%;
+        width: 80%;
+        background: red;
+        display: flex;
+
+        .technology-section-container {
+            display: flex;
+            flex-direction: row;
+            border-radius: 100px;
+            max-height: 48%;
+            min-height: 15rem;
+            max-width: 28%;
+            flex: 1 1 50%;
+            margin: 4px;
+            border-radius: 15px;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                background: $gradient-color;
+
+                .technology-figure-modal {
+                    .technology-image-modal {
+                        filter: sepia(0%) hue-rotate(10deg) saturate(100%) !important;
+                    }
+                }
+            }
+
+            hr {
+                border: none;
+                height: 2px;
+                background-image: $gradient-color;
+                margin: 2px 1rem;
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+
+            }
+
+            .technology-section-card {
+                display: flex;
+                box-shadow: 8px 8px 9px rgba(0, 0, 0, 0.1),
+                    -2px -2px 10px rgba(169, 169, 169, 0.593);
+                border-radius: 15px;
+                background: $secondary-background-color;
+                color: $font-color;
+                flex-direction: column;
+                justify-content: center;
+                width: 99%;
+                height: 97%;
+
+                .technology-article-card {
+                    width: 99%;
+                    height: 97%;
+                    display: flex;
+                    flex-direction: column;
+                    flex-direction: row;
+
+                    .technology-figure-modal {
+                        margin: 0;
+                        width: 30%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        max-height: 20rem;
+                        max-width: 20rem;
+                        margin: 0 0.5rem;
+
+                        .technology-image-modal {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                            filter: sepia(90%) hue-rotate(170deg) saturate(90%);
+                            transition: filter 0.01s ease-in-out;
+                        }
+                    }
+
+
+                    .technology-description {
+                        display: flex;
+                        flex-direction: column;
+                        height: 90%;
+                        width: 70%;
+                        justify-content: space-between;
+
+                        margin: 1rem 2rem;
+
+
+                        h2 {
+                            margin-bottom: 0.5rem;
+                            font-size: 1.2rem;
+                        }
+
+                        p {
+                            font-size: 0.9rem;
+                            color: $font-secondary-color;
+                        }
+
+                        * {
+                            margin: 0;
+                        }
+                    }
+                }
+
+                .technology-card-footer {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin: 0.1rem 2rem 0.3rem 2rem;
+                }
+            }
+
+        }
+    }
 }
