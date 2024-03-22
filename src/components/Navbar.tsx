@@ -7,19 +7,19 @@ import Switch from './atoms/Switch';
 const Navbar = () => {
 
   const [englishSelected, setEnglishSelected] = useState<boolean>(false)
-  const selectingLanguage = (event: React.ChangeEvent<HTMLInputElement>) => {
+  // const selectingLanguage = (event: React.ChangeEvent<HTMLInputElement>) => {
 
-    setEnglishSelected(event.target.checked)
-    if (event.target.checked) {
-      i18n.changeLanguage('en')
-    }
-    else {
+  //   setEnglishSelected(event.target.checked)
+  //   if (event.target.checked) {
+  //     i18n.changeLanguage('en')
+  //   }
+  //   else {
 
-      i18n.changeLanguage('es')
-    }
+  //     i18n.changeLanguage('es')
+  //   }
 
 
-  }
+  // }
   const newSetEnglishSelected = () => {
     setEnglishSelected(!englishSelected)
     if (!englishSelected) {
