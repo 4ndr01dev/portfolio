@@ -6,8 +6,8 @@ import './GitSection.scss'
 const GitSection = () => {
   // const { t } = useTranslation()
   return (
-    <div className='gitSection'>
-      <figure className='figure'>
+    <div className="gitSection">
+      <figure className="git_figure">
         <img src={largeIcon} alt="" className='image' />
       </figure>
       {/* <Card title={t('githubTitle')} thumbnail={smallIcon}>

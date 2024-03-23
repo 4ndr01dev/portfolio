@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header>
+      <header className='nav_bar_container'>
         <figure className='figure'>
           <img src={smallIcon} alt="" className='image' />
         </figure>

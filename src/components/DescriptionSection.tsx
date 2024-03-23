@@ -266,8 +266,7 @@ const DescriptionSection = () => {
     <section className="profile">
       <div className="button">
         <a href="#" onClick={buttonHandler}>
-          {' '}
-          {t('cv')}{' '}
+          {t('cv')}
         </a>
       </div>
       <div className="description">

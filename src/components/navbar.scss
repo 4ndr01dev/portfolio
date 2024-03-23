@@ -1,8 +1,9 @@
 @import '/src/index.scss';
 @import '/src/styles/mixins/mixins.scss';
 
-header {
+.nav_bar_container {
     display: none;
+    position: absolute;
 
     .figure {
         margin: 1vw;
