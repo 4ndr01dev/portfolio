@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+// import React from 'react'
 import './MainPage.scss'
 import { useTranslation } from 'react-i18next'
 import DescriptionSection from '../components/DescriptionSection'
@@ -135,7 +136,6 @@ const MainPage = () => {
                   </figure>
                   <article className="technology-article-card">
                     <div className="technology-description">
-                      {/* description */}
                       <div>
                         <h2>{}</h2>
                         <p>tiempo de desarrollo</p>
