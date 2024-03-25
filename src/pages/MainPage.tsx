@@ -113,8 +113,8 @@ const MainPage = () => {
     <>
       <div className="mainContainer">
         <article className="title">
-          <h2>Álvaro Andrade Ardiles</h2>
-          <h1>{t('mainPageSubtitle')}</h1>
+          <h1>Álvaro Andrade Ardiles</h1>
+          <h2>{t('mainPageSubtitle')}</h2>
         </article>
         <article className="content">
           <section className="description_section">
