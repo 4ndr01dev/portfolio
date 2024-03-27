@@ -10,7 +10,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 35vh;
+        height: 20vh;
         margin: 1rem;
         flex-direction: column;
 
@@ -36,6 +36,7 @@
                 margin: 0;
                 font-size: 68px;
             }
+
             h2 {
                 font-size: 40px;
             }
@@ -43,7 +44,7 @@
         }
 
         @include for-size(medium) {
-            height: 75vh;
+            height: 55vh;
             margin: 0;
 
             h1 {
@@ -51,7 +52,7 @@
             }
 
             h2 {
-                font-size: 30px;
+                font-size: 55px;
             }
         }
     }

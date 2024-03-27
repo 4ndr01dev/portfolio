@@ -5,6 +5,20 @@ import Card from './atoms/Card'
 import ImagesGrid from './atoms/ImagesGrid'
 import { Technology } from '../types/Technologies'
 import Modal from './atoms/Modal'
+import imageVue from '../assets/technologies_assets/vuedotjs.svg'
+import fastapi from '../assets/technologies_assets/fastapi.svg'
+import flutter from '../assets/technologies_assets/flutter.svg'
+import python from '../assets/technologies_assets/python.svg'
+import javascript from '../assets/technologies_assets/javascript.svg'
+import mysql from '../assets/technologies_assets/mysql.svg'
+import jirasoftware from '../assets/technologies_assets/jirasoftware.svg'
+import git from '../assets/technologies_assets/git.svg'
+import css3 from '../assets/technologies_assets/css3.svg'
+import react from '../assets/technologies_assets/react.svg'
+import angular from '../assets/technologies_assets/angular.svg'
+import strapi from '../assets/technologies_assets/strapi.svg'
+import postgresql from '../assets/technologies_assets/postgresql.svg'
+import docker from '../assets/technologies_assets/docker.svg'
 const DescriptionSection = () => {
   const { t } = useTranslation()
   const [technologies] = useState<Technology[]>([
@@ -23,6 +37,7 @@ const DescriptionSection = () => {
         'Vue.js es un framework progresivo para construir interfaces de usuario.',
       index: 1,
       imageUrl: 'https://vuejs.org/images/logo.png',
+      imageLocal: imageVue,
     },
     {
       name: 'Fast-api',
@@ -39,6 +54,7 @@ const DescriptionSection = () => {
         'FastAPI es un moderno y rápido framework web para construir APIs con Python.',
       index: 2,
       imageUrl: 'https://cdn.worldvectorlogo.com/logos/fastapi-1.svg',
+      imageLocal: fastapi,
     },
     {
       name: 'Flutter',
@@ -56,9 +72,11 @@ const DescriptionSection = () => {
       index: 3,
       imageUrl:
         'https://storage.googleapis.com/cms-storage-bucket/4fd5520fe28ebf839174.svg',
+      imageLocal: flutter,
     },
     {
       name: 'Python',
+      favorite: true,
       hasCertify: true,
       hasCourse: true,
       courses: [
@@ -73,6 +91,7 @@ const DescriptionSection = () => {
       index: 4,
       imageUrl:
         'https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg',
+      imageLocal: python,
     },
     {
       name: 'JavaScript',
@@ -89,6 +108,7 @@ const DescriptionSection = () => {
         'JavaScript es un lenguaje de programación ligero, interpretado, o compilado justo a tiempo con funciones de primera clase.',
       index: 5,
       imageUrl: 'https://cdn.worldvectorlogo.com/logos/javascript-1.svg',
+      imageLocal: javascript,
     },
     {
       name: 'MySQL',
@@ -106,6 +126,7 @@ const DescriptionSection = () => {
       index: 6,
       imageUrl:
         'https://icons.veryicon.com/png/o/system/inspur-cloud-icon/rds-mysql.png',
+      imageLocal: mysql,
     },
     {
       name: 'Scrum',
@@ -117,6 +138,7 @@ const DescriptionSection = () => {
       index: 7,
       imageUrl:
         'https://seeklogo.com/images/S/scrum-logo-B057CBD9B8-seeklogo.com.png',
+      imageLocal: jirasoftware,
     },
     {
       name: 'Git',
@@ -133,6 +155,7 @@ const DescriptionSection = () => {
         'Git es un sistema de control de versiones distribuido, diseñado para manejar desde proyectos pequeños a muy grandes con rapidez y eficiencia.',
       index: 8,
       imageUrl: 'https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png',
+      imageLocal: git,
     },
     {
       name: 'CSS',
@@ -150,6 +173,7 @@ const DescriptionSection = () => {
       index: 9,
       imageUrl:
         'https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg',
+      imageLocal: css3,
     },
     {
       name: 'React',
@@ -167,6 +191,7 @@ const DescriptionSection = () => {
       index: 10,
       imageUrl:
         'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
+      imageLocal: react,
     },
     {
       name: 'Angular',
@@ -183,6 +208,7 @@ const DescriptionSection = () => {
         'Angular es un marco de trabajo para aplicaciones web desarrollado por Google, que utiliza TypeScript como principal lenguaje de programación.',
       index: 11,
       imageUrl: 'https://angular.io/assets/images/logos/angular/angular.svg',
+      imageLocal: angular,
     },
     {
       name: 'STRAPI',
@@ -193,6 +219,7 @@ const DescriptionSection = () => {
         'STRAPI es un sistema de gestión de contenido (CMS) de código abierto basado en Node.js, que ofrece APIs REST y GraphQL.',
       index: 12,
       imageUrl: 'https://strapi.io/assets/strapi-logo-light.svg',
+      imageLocal: strapi,
     },
     {
       name: 'Postgres',
@@ -209,6 +236,7 @@ const DescriptionSection = () => {
         'Postgres, también conocido como PostgreSQL, es un sistema de gestión de bases de datos relacional orientado a objetos y de código abierto.',
       index: 13,
       imageUrl: 'https://www.postgresql.org/media/img/about/press/elephant.png',
+      imageLocal: postgresql,
     },
     {
       name: 'Docker',
@@ -226,11 +254,15 @@ const DescriptionSection = () => {
       index: 15,
       imageUrl:
         'https://logos-world.net/wp-content/uploads/2021/02/Docker-Emblem.png',
+      imageLocal: docker,
     },
   ])
+
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(true)
   const buttonHandler = async () => {
-    const response = await fetch('http://localhost:8000/test', { method: 'GET' })
+    const response = await fetch('http://localhost:8000/test', {
+      method: 'GET',
+    })
     console.log(response.ok)
     if (!response.ok) {
       alert(
@@ -280,7 +312,7 @@ const DescriptionSection = () => {
           onClick={handleCardClick}
         >
           <article className="technology_card_article">
-            <section className="technologiesContent">
+            <section className="technologies_content">
               <div className="imageGridSection">
                 <ImagesGrid technologies={technologies}></ImagesGrid>
               </div>
@@ -301,8 +333,11 @@ const DescriptionSection = () => {
                       <figure key={i} className="technology-figure-modal">
                         <img
                           key={i}
-                          src={technology.imageUrl}
-                          alt=""
+                          src={
+                            technology.imageLocal
+                              ? technology.imageLocal
+                              : technology.imageUrl
+                          }
                           className="technology-image-modal"
                         />
                       </figure>
