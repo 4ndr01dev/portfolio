@@ -100,6 +100,16 @@
                 &:hover {
                     background: $gradient-color;
 
+                    .technology-section-card {
+                        .technology-article-card {
+                            .technology-figure-modal {
+                                .technology-image-modal {
+                                    filter: invert(98%) sepia(3%) saturate(567%) hue-rotate(236deg) brightness(119%) contrast(100%);
+                                }
+                            }
+                        }
+                    }
+
                 }
 
                 hr {
@@ -113,8 +123,6 @@
 
                 .technology-section-card {
                     display: flex;
-                    // box-shadow: 8px 8px 9px rgba(0, 0, 0, 0.1),
-                    //     -2px -2px 10px rgba(169, 169, 169, 0.593);
                     border-radius: 15px;
                     background: $secondary-background-color;
                     color: $font-color;
@@ -129,7 +137,7 @@
                         display: flex;
                         flex-direction: column;
                         flex-direction: row;
-                        margin-bottom: 1rem;
+                        margin: 1rem;
 
                         .technology-figure-modal {
                             margin: 0;
@@ -141,11 +149,12 @@
                             max-width: 20rem;
                             margin: 0 0.5rem;
 
+
                             .technology-image-modal {
+                                filter: invert(86%) sepia(4%) saturate(20%) hue-rotate(64deg) brightness(82%) contrast(90%);
                                 width: 100%;
                                 height: 100%;
                                 object-fit: contain;
-                                fill: #ff0000;
                             }
                         }
 
@@ -153,11 +162,10 @@
                         .technology-description {
                             display: flex;
                             flex-direction: column;
-                            height: 90%;
+                            // height: 90%;
                             width: 70%;
                             justify-content: space-between;
-
-                            margin: 1rem 2rem;
+                            margin: 0rem 2rem;
 
 
                             h2 {
