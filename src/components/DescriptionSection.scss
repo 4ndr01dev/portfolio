@@ -97,8 +97,9 @@
                 justify-content: center;
                 align-items: center;
 
-                &:hover {
-                    background: $gradient-color;
+                & {
+                    transition: background 0.8s ease, transform 0.2s ease;
+                    // background: $background-color;
 
                     .technology-section-card {
                         .technology-article-card {
@@ -109,8 +110,14 @@
                             }
                         }
                     }
-
                 }
+
+                &:hover {
+                    transform: scale(1.005);
+                    opacity: 1;
+                    background: $gradient-color;
+                }
+
 
                 hr {
                     border: none;
