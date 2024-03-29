@@ -1,0 +1,23 @@
+@import '/src/index.scss';
+
+.budget_container {
+    display: flex;
+    flex-direction: row;
+    background: $gradient-color ;
+    border-radius: 5px;
+    min-width: 4rem;
+    width: 12%;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: 0 1rem ;
+
+    .budget_figure {
+        display: flex;
+    }
+
+    .budget_text {
+        color: black !important;
+        font-weight: bolder;
+    }
+}

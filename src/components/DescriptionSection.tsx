@@ -19,6 +19,7 @@ import angular from '../assets/technologies_assets/angular.svg'
 import strapi from '../assets/technologies_assets/strapi.svg'
 import postgresql from '../assets/technologies_assets/postgresql.svg'
 import docker from '../assets/technologies_assets/docker.svg'
+import Budget from './atoms/Budget'
 const DescriptionSection = () => {
   const { t } = useTranslation()
   const [technologies] = useState<Technology[]>([
@@ -351,7 +352,7 @@ const DescriptionSection = () => {
                           <p>{technology.description}</p>
                         </div>
                         <footer>
-                          <a href="google.com"> certified</a>
+                          <Budget>Certified</Budget>
                         </footer>
                       </div>
                     </article>
