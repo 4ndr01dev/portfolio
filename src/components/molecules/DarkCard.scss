@@ -1,0 +1,139 @@
+    @import '/src/index.scss';
+    @import '/src/styles/mixins/mixins.scss';
+
+    .dark-card-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+
+      .dark-card-section-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        border-radius: 100px;
+        margin: 4px;
+        border-radius: 15px;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+
+        &:hover {
+          background: $gradient-color;
+
+          .figure-modal {
+            .image-modal {
+              filter: sepia(0%) hue-rotate(10deg) saturate(100%) !important;
+            }
+          }
+        }
+
+
+        .figure-modal {
+          margin: 0;
+          width: 30%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          max-height: 20rem;
+          max-width: 20rem;
+          margin: 0 0.5rem;
+
+
+          .image-modal {
+            filter: invert(86%) sepia(4%) saturate(20%) hue-rotate(64deg) brightness(82%) contrast(90%);
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+
+        .section-card {
+          flex-direction: row;
+          display: flex;
+          border-radius: 15px;
+          background: $secondary-background-color;
+          color: $font-color;
+          flex-direction: column;
+          justify-content: center;
+          flex-grow: 1;
+          height: 100%;
+
+
+
+          .article-card {
+            width: 99%;
+            height: 95%;
+            display: flex;
+            flex-direction: column;
+            flex-direction: row;
+            margin: 1rem;
+
+            .figure-modal {
+              margin: 0;
+              width: 30%;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              max-height: 20rem;
+              max-width: 20rem;
+              margin: 0 0.5rem;
+
+              .image-modal {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                filter: sepia(90%) hue-rotate(170deg) saturate(90%);
+                transition: filter 0.01s ease-in-out;
+              }
+            }
+
+
+            .description {
+              display: flex;
+              flex-direction: column;
+              height: 90%;
+              width: 70%;
+              justify-content: space-between;
+
+              margin: 1rem 2rem;
+
+
+              h2 {
+                margin-bottom: 0.5rem;
+                font-size: 1.2rem;
+              }
+
+              p {
+                font-size: 0.9rem;
+                color: $font-secondary-color;
+              }
+
+              * {
+                margin: 0;
+              }
+            }
+          }
+
+          .card-footer {
+            height: 5%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0.6rem 2rem 0.6rem 2rem;
+          }
+        }
+
+        hr {
+          border: none;
+          height: 2px;
+          background-image: $gradient-color;
+          margin: 2px 1rem;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        }
+
+
+
+      }
+    }

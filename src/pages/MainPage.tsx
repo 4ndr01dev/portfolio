@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import './MainPage.scss'
 import { useTranslation } from 'react-i18next'
-import DescriptionSection from '../components/DescriptionSection'
-import GitSection from '../components/GitSection'
+import DescriptionSection from '../components/organism/DescriptionSection'
+import GitSection from '../components/organism/GitSection'
 import { Experience } from '../types/Expirience'
+import DarkCard from '../components/molecules/DarkCard'
 
 const MainPage = () => {
   const { t } = useTranslation()
@@ -111,39 +112,14 @@ const MainPage = () => {
           </section>
         </article>
       </div>
-      <div className="technologyContainer">
+      <div className="experience-container">
         {experiences.map((experience: Experience, i) => {
           return (
-            <article key={i} className="technologyContent">
-              <section className="technology-section-container">
-                <section className="technology-section-card">
-                  <figure className="technology-figure-modal">
-                    <img alt="" className="technology-image-modal" />
-                  </figure>
-                  <article className="technology-article-card">
-                    <div className="technology-description">
-                      <div>
-                        <h2>{}</h2>
-                        <p>tiempo de desarrollo</p>
-                      </div>
-                      <div>
-                        <p>{}</p>
-                      </div>
-                      <footer>
-                        <a href=""> certified</a>
-                      </footer>
-                    </div>
-                  </article>
-                  <hr />
-                  <footer className="technology-card-footer">
-                    <div>grid image</div>
-                    <div>preferencia</div>
-                  </footer>
-                </section>
-              </section>
-            </article>
+
+          <DarkCard key={i}  title={experience.position} subtitle={experience.company}/>
           )
-        })}
+        }
+        )}
       </div>
     </>
   )

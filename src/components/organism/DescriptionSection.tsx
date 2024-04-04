@@ -1,25 +1,26 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import './DescriptionSection.scss'
-import Card from './atoms/Card'
-import ImagesGrid from './atoms/ImagesGrid'
-import { Technology } from '../types/Technologies'
-import Modal from './atoms/Modal'
-import imageVue from '../assets/technologies_assets/vuedotjs.svg'
-import fastapi from '../assets/technologies_assets/fastapi.svg'
-import flutter from '../assets/technologies_assets/flutter.svg'
-import python from '../assets/technologies_assets/python.svg'
-import javascript from '../assets/technologies_assets/javascript.svg'
-import mysql from '../assets/technologies_assets/mysql.svg'
-import jirasoftware from '../assets/technologies_assets/jirasoftware.svg'
-import git from '../assets/technologies_assets/git.svg'
-import css3 from '../assets/technologies_assets/css3.svg'
-import react from '../assets/technologies_assets/react.svg'
-import angular from '../assets/technologies_assets/angular.svg'
-import strapi from '../assets/technologies_assets/strapi.svg'
-import postgresql from '../assets/technologies_assets/postgresql.svg'
-import docker from '../assets/technologies_assets/docker.svg'
-import Budget from './atoms/Budget'
+import Card from '../atoms/Card'
+import ImagesGrid from '../atoms/ImagesGrid'
+import { Technology } from '../../types/Technologies'
+import Modal from '../atoms/Modal'
+import imageVue from '../../assets/technologies_assets/vuedotjs.svg'
+import fastapi from '../../assets/technologies_assets/fastapi.svg'
+import flutter from '../../assets/technologies_assets/flutter.svg'
+import python from '../../assets/technologies_assets/python.svg'
+import javascript from '../../assets/technologies_assets/javascript.svg'
+import mysql from '../../assets/technologies_assets/mysql.svg'
+import jirasoftware from '../../assets/technologies_assets/jirasoftware.svg'
+import git from '../../assets/technologies_assets/git.svg'
+import css3 from '../../assets/technologies_assets/css3.svg'
+import react from '../../assets/technologies_assets/react.svg'
+import angular from '../../assets/technologies_assets/angular.svg'
+import strapi from '../../assets/technologies_assets/strapi.svg'
+import postgresql from '../../assets/technologies_assets/postgresql.svg'
+import docker from '../../assets/technologies_assets/docker.svg'
+// import Budget from '../atoms/Budget'
+import DarkCard from '../molecules/DarkCard'
 const DescriptionSection = () => {
   const { t } = useTranslation()
   const [technologies] = useState<Technology[]>([
@@ -328,43 +329,53 @@ const DescriptionSection = () => {
           <section className="technologies_section_container">
             {technologies.map((technology: Technology, i) => {
               return (
-                <section key={i} className="technology-section-container">
-                  <section className="technology-section-card">
-                    <article className="technology-article-card">
-                      <figure key={i} className="technology-figure-modal">
-                        <img
-                          key={i}
-                          src={
-                            technology.imageLocal
-                              ? technology.imageLocal
-                              : technology.imageUrl
-                          }
-                          className="technology-image-modal"
-                        />
-                      </figure>
-                      <div className="technology-description">
-                        {/* description */}
-                        <div>
-                          <h2>{technology.name}</h2>
-                          <p>tiempo de desarrollo</p>
-                        </div>
-                        <div>
-                          <p>{technology.description}</p>
-                        </div>
-                        <footer>
-                          <Budget>Certified</Budget>
-                        </footer>
-                      </div>
-                    </article>
-                    <div>
-                      <hr />
-                    </div>
-                    <footer className="technology-card-footer">
-                      <div>grid image</div>
-                      <div>preferencia</div>
-                    </footer>
-                  </section>
-                </section>
+                // <section key={i} className="technology-section-container">
+                //   <section className="technology-section-card">
+                //     <article className="technology-article-card">
+                //       <figure key={i} className="technology-figure-modal">
+                //         <img
+                //           key={i}
+                //           src={
+                //             technology.imageLocal
+                //               ? technology.imageLocal
+                //               : technology.imageUrl
+                //           }
+                //           className="technology-image-modal"
+                //         />
+                //       </figure>
+                //       <div className="technology-description">
+                //         {/* description */}
+                //         <div>
+                //           <h2>{technology.name}</h2>
+                //           <p>tiempo de desarrollo</p>
+                //         </div>
+                //         <div>
+                //           <p>{technology.description}</p>
+                //         </div>
+                //         <footer>
+                //           <Budget>Certified</Budget>
+                //         </footer>
+                //       </div>
+                //     </article>
+                //     <div>
+                //       <hr />
+                //     </div>
+                //     <footer className="technology-card-footer">
+                //       <div>grid image</div>
+                //       <div>preferencia</div>
+                //     </footer>
+                //   </section>
+                // </section>
+                <DarkCard
+                  key={i}
+                  title={technology.name}
+                  subtitle={technology.description}
+                  image={
+                    technology.imageLocal
+                      ? technology.imageLocal
+                      : technology.imageUrl
+                  }
+                />
               )
             })}
           </section>

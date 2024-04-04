@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import i18n from "i18next";
 import './navbar.scss'
-import smallIcon from '../assets/logo_small.svg'
-import Switch from './atoms/Switch';
+import smallIcon from '../../assets/logo_small.svg'
+import Switch from '../atoms/Switch';
 
 const Navbar = () => {
 

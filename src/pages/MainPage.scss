@@ -44,8 +44,9 @@
         }
 
         @include for-size(medium) {
-            height: 55vh;
+            height: 60vh;
             margin: 0;
+            padding: 4rem 0 0 0;
 
             h1 {
                 font-size: 45px;
@@ -58,20 +59,20 @@
     }
 
     .content {
+
         display: flex;
         flex-direction: column;
-        height: 100%;
 
         .git_section {
             display: none;
             width: 100%;
-
+            height: 80%;
         }
 
         .description_section {
             display: flex;
             width: 100%;
-            height: 100%;
+            height: 60%;
         }
 
         @include for-size(medium) {
@@ -89,17 +90,17 @@
 
 }
 
-.technologyContainer {
+.experience-container {
     display: flex;
     height: 100vh;
     width: 100%;
     flex-wrap: wrap;
 
-    .technologyContent {
+    .experience-content {
         display: flex;
         flex: 1 1 25%;
 
-        .technology-section-container {
+        .experience-section-container {
             display: flex;
             width: 100%;
             border-radius: 100px;
@@ -113,14 +114,14 @@
             &:hover {
                 background: $gradient-color;
 
-                .technology-figure-modal {
-                    .technology-image-modal {
+                .experience-figure-modal {
+                    .experience-image-modal {
                         filter: sepia(0%) hue-rotate(10deg) saturate(100%) !important;
                     }
                 }
             }
 
-            .technology-section-card {
+            .experience-section-card {
                 display: flex;
                 border-radius: 15px;
                 background: $secondary-background-color;
@@ -130,14 +131,14 @@
                 flex-grow: 1;
                 height: 100%;
 
-                .technology-article-card {
+                .experience-article-card {
                     width: 99%;
                     height: 97%;
                     display: flex;
                     flex-direction: column;
                     flex-direction: row;
 
-                    .technology-figure-modal {
+                    .experience-figure-modal {
                         margin: 0;
                         width: 30%;
                         height: 100%;
@@ -147,7 +148,7 @@
                         max-width: 20rem;
                         margin: 0 0.5rem;
 
-                        .technology-image-modal {
+                        .experience-image-modal {
                             width: 100%;
                             height: 100%;
                             object-fit: contain;
@@ -157,7 +158,7 @@
                     }
 
 
-                    .technology-description {
+                    .experience-description {
                         display: flex;
                         flex-direction: column;
                         height: 90%;
@@ -183,7 +184,7 @@
                     }
                 }
 
-                .technology-card-footer {
+                .experience-card-footer {
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
