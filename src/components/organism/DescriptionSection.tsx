@@ -329,43 +329,6 @@ const DescriptionSection = () => {
           <section className="technologies_section_container">
             {technologies.map((technology: Technology, i) => {
               return (
-                // <section key={i} className="technology-section-container">
-                //   <section className="technology-section-card">
-                //     <article className="technology-article-card">
-                //       <figure key={i} className="technology-figure-modal">
-                //         <img
-                //           key={i}
-                //           src={
-                //             technology.imageLocal
-                //               ? technology.imageLocal
-                //               : technology.imageUrl
-                //           }
-                //           className="technology-image-modal"
-                //         />
-                //       </figure>
-                //       <div className="technology-description">
-                //         {/* description */}
-                //         <div>
-                //           <h2>{technology.name}</h2>
-                //           <p>tiempo de desarrollo</p>
-                //         </div>
-                //         <div>
-                //           <p>{technology.description}</p>
-                //         </div>
-                //         <footer>
-                //           <Budget>Certified</Budget>
-                //         </footer>
-                //       </div>
-                //     </article>
-                //     <div>
-                //       <hr />
-                //     </div>
-                //     <footer className="technology-card-footer">
-                //       <div>grid image</div>
-                //       <div>preferencia</div>
-                //     </footer>
-                //   </section>
-                // </section>
                 <DarkCard
                   key={i}
                   title={technology.name}
