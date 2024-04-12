@@ -1,6 +1,6 @@
 import React from 'react'
 import './Modal.scss'
-import Card from './Card'
+import Card from '../molecules/Card'
 
 interface modalProps {
   hadCard?: boolean

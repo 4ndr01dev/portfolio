@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import './DescriptionSection.scss'
-import Card from '../atoms/Card'
+import Card from '../molecules/Card'
 import ImagesGrid from '../atoms/ImagesGrid'
 import { Technology } from '../../types/Technologies'
 import Modal from '../atoms/Modal'
