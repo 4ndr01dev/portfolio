@@ -1,5 +1,5 @@
 import React from 'react' //,  { FC, SVGProps }
-import Budget from '../atoms/Budget'
+// import Budget from '../atoms/Budget'
 import './DarkCard.scss'
 // FC<SVGProps<SVGElement>>
 interface DarkCardProps {
@@ -8,9 +8,18 @@ interface DarkCardProps {
   subtitle?: string
   content?: string
   image?: string
+  footerComponent?: React.ReactNode
+  budget?: React.ReactNode
 }
 
-const DarkCard = ({ key = 1, title, image, subtitle }: DarkCardProps) => {
+const DarkCard = ({
+  key = 1,
+  title,
+  image,
+  subtitle,
+  footerComponent,
+  budget,
+}: DarkCardProps) => {
   return (
     <article key={key} className="dark-card-content">
       <section className="dark-card-section-container">
@@ -33,15 +42,19 @@ const DarkCard = ({ key = 1, title, image, subtitle }: DarkCardProps) => {
                 <p>{}</p>
               </div>
               <footer>
-                <Budget>Certified</Budget>
+                {/* <Budget>Certified</Budget> */}
+                {budget ? <>{budget}</> : ''}
               </footer>
             </div>
           </article>
-          <hr />
-          <footer className="card-footer">
-            <div>grid image</div>
-            <div>preferencia</div>
-          </footer>
+          {footerComponent ? (
+            <>
+              <hr />
+              <footer className="card-footer">{footerComponent}</footer>
+            </>
+          ) : (
+            ''
+          )}
         </section>
       </section>
     </article>

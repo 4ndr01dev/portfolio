@@ -19,8 +19,7 @@ import angular from '../../assets/technologies_assets/angular.svg'
 import strapi from '../../assets/technologies_assets/strapi.svg'
 import postgresql from '../../assets/technologies_assets/postgresql.svg'
 import docker from '../../assets/technologies_assets/docker.svg'
-// import Budget from '../atoms/Budget'
-import DarkCard from '../molecules/DarkCard'
+import TechnologiesGrid from './TechnologiesGrid'
 const DescriptionSection = () => {
   const { t } = useTranslation()
   const [technologies] = useState<Technology[]>([
@@ -326,22 +325,7 @@ const DescriptionSection = () => {
           </article>
         </Card>
         <Modal onClose={closeModalHandler} isOpen={modalIsOpen}>
-          <section className="technologies_section_container">
-            {technologies.map((technology: Technology, i) => {
-              return (
-                <DarkCard
-                  key={i}
-                  title={technology.name}
-                  subtitle={technology.description}
-                  image={
-                    technology.imageLocal
-                      ? technology.imageLocal
-                      : technology.imageUrl
-                  }
-                />
-              )
-            })}
-          </section>
+          <TechnologiesGrid technologies={technologies}></TechnologiesGrid>
         </Modal>
       </div>
     </section>
